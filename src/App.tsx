@@ -11,16 +11,18 @@ interface WeatherData {
 
 function App() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
-  const [city, setCity] = useState('London');
+  const [city, setCity] = useState('New York');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  const API_URL = import.meta.env.VITE_API_URL || '/api';
 
   const fetchWeather = async () => {
     setLoading(true);
     setError('');
     
     try {
-      const response = await fetch(`http://localhost:5047/api/weather/${city}`);
+      const response = await fetch(`${API_URL}/weather/${city}`);
       
       if (!response.ok) {
         throw new Error('City not found');
