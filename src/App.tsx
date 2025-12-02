@@ -86,7 +86,7 @@ function App() {
           </button>
         </div>
 
-        {error && <p style={{ color: '#ff6b6b' }}>{error}</p>}
+        {error && <p style={{ color: '#ab2828ff' }}>{error}</p>}
 
         {weather && (
           <motion.div
