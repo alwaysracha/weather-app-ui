@@ -95,7 +95,7 @@ function App() {
             transition={{ duration: 0.5 }}
             style={{ 
               padding: '2rem',
-              backgroundColor: '#16213e',
+              backgroundColor: '#798fccff',
               borderRadius: '15px',
               minWidth: '300px'
             }}
